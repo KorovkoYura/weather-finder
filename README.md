@@ -8,13 +8,13 @@ Here, the folder structure
 weather-finder/
   public/
     index.html
-    favicon.ico
+  	favicon.ico
   src/
     actions/
 			weatherCard.js
 		components/
-			layout/
-			views/
+		layout/
+		views/
 		containers/
 			WeatherCardGrid.js
 		reducers/
