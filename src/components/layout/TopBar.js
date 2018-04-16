@@ -14,6 +14,16 @@ class TopBar extends Component {
 		value: ''
   }
 	
+	handleCheckValue = value => {
+		if (value !== '') {
+			this.props.addCard(value)
+			this.setState({ value: '' })
+			return true
+		} else {
+			return false
+		}
+	}
+
 	handleClickOpen = () => {
     this.setState({ open: true })
   }
@@ -30,7 +40,6 @@ class TopBar extends Component {
 	const { 
 		classes, 
 		history, 
-		addCard, 
 		themeType, 
 		changeTheme, 
 		backBtn, 
@@ -72,7 +81,7 @@ class TopBar extends Component {
 							open={this.state.open}
 							value={this.state.value}
 							handleClose={this.handleClose}
-							addCard={addCard}
+							handleCheckValue={this.handleCheckValue}
 							handleChange={this.handleChange}
 						/>
 					</Toolbar>
